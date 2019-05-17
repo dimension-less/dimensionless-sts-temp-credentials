@@ -11,7 +11,7 @@ from botocore.exceptions import ClientError
 def get_credentials():
     client = boto3.client('sts')
     assumed_role_object = client.assume_role(
-        RoleArn="arn:aws:iam::701297840991:role/admin",
+        RoleArn="arn:aws:iam::XXXXX:role/XXXXX",
         RoleSessionName="AssumeRoleSession1"
     )
     print(assumed_role_object['Credentials']['SecretAccessKey'])
